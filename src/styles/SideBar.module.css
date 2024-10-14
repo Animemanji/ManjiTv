@@ -1,0 +1,113 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: orange;
+    margin: 5px 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 19%;
+    height: 100%;
+    background-color: #00000093;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 100px 0 0;
+    text-align: center;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+.submenu li a {
+    color: white;
+    font-size: 18px;
+}
+
+.closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: orange;
+    cursor: pointer;
+}
+
+.search {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn{
+    background: none;
+    border: none;
+}
+
+@media screen and (max-width:900px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background-color: #000000ac;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+}

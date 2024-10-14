@@ -1,0 +1,48 @@
+.popular_title {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    padding: 1rem 0 0 4%;
+
+}
+
+.popular {
+    width: 100vw;
+    display: flex;
+    padding: 0.5rem 5%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post_con {
+    width: 9.8rem;
+    margin-bottom: 1rem;
+    gap: 20px;
+}
+
+.img {
+    background-color: #333;
+    width: 10.8rem;
+    height: 18.8rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.title p {
+    color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 1rem !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.public {
+    color: #9F9F9F;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}

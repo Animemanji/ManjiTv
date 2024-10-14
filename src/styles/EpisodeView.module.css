@@ -1,0 +1,42 @@
+.videoWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .videoPlayer {
+    width: 100%;
+    height: auto;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .playPauseBtn, .skipBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .playPauseBtn:hover, .skipBtn:hover {
+    background-color: #555;
+  }
+  
+  .progressBar {
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+  
+  .timeInfo {
+    color: white;
+    font-size: 14px;
+  }
+  

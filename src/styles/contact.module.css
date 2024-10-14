@@ -1,0 +1,133 @@
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: #FCA311;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: #fff;
+}
+
+.contactInfo {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contactInfo h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.email {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email:hover {
+    background-color: #464646;
+}
+
+.email span {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.email i {
+    color: #FCA311;
+    font-size: 22px;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.email:active .tooltip {
+    visibility: visible;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.iconTextBg {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    border-radius: 100rem;
+    color: #fff;
+    width: 40vw;
+    margin: 0.3rem;
+}
+
+.iconTextBg p {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.insIcon {
+    background: linear-gradient(0deg, rgba(251, 195, 50, 1) 10%, rgba(255, 5, 167, 1) 50%, rgba(83, 84, 211, 1) 100%);
+    font-size: 140%;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.tgIcon {
+    background-color: #32A6E1;
+    font-size: 140%;
+    padding: 0.5rem;
+    border-radius: 100rem;
+}
+
+.i {
+    font-size: 140%;
+}
+
+.xIcon {
+    background-color: #1D9CEB;
+    font-size: 140%;
+    padding: 0.5rem;
+    border-radius: 100rem;
+}
+
+.fbIcon {
+    background-color: #0865FE;
+    font-size: 140%;
+    padding: 0.5rem;
+    border-radius: 100rem;
+}

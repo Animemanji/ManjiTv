@@ -1,0 +1,135 @@
+.main {
+    width: 100%;
+    height: 59vh;
+    align-items: center;
+}
+
+.heading {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.head_line {
+    width: 150px;
+    margin-left: 20px;
+}
+
+.text {
+    color: #D4D4D4;
+    margin: 20px 20px 20px 20px;
+}
+
+.tnkn {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.con_head {
+    color: #ffffff;
+    margin: 50px 0px 0px 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.con_btn_tele {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #36ACE9;
+    margin: 50px 15px 5px 15px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.con_btn_ins {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E04F8A;
+    margin: 20px 15px 5px 15px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.social_para {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.mail {
+    background: #000000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px 20px 20px;
+    border: 2px solid #2A2A2A;
+    height: 30px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+}
+
+.h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /* color: #333; */
+}
+
+.h2, .h3 {
+    /* color: #444; */
+    margin-top: 30px;
+    font-size: 1.75rem;
+}
+
+.p {
+    font-size: 20px;
+    line-height: 1.6;
+    /* color: #666; */
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.ul li {
+    margin-bottom: 10px;
+}
+
+.a {
+    /* color: #1a73e8; */
+    text-decoration: none;
+}
+
+.a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .h1 {
+        font-size: 2rem;
+    }
+
+    .h2, .h3 {
+        font-size: 1.5rem;
+    }
+}
