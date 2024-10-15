@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('demon');
+  const [password, setPassword] = useState('bhai');
   const router = useRouter();
 
   const handleSubmit = async (e) => {
