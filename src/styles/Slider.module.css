@@ -1,16 +1,31 @@
+:root {
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font family */
+    --slider-container-bg: #151515; /* Background color for slider container */
+    --slider-shadow: rgba(0, 0, 0, 0.5); /* Shadow color for slider */
+    --description-bg: rgba(0, 0, 0, 0.6); /* Background color for description */
+    --description-color: white; /* Text color for description */
+    --watch-bg: linear-gradient(135deg, #ff416c, #ff4b2b); /* Background gradient for watch button */
+    --watch-hover-bg: linear-gradient(135deg, #ff4b2b, #ff416c); /* Hover background gradient for watch button */
+    --watch-padding: 10px 20px; /* Padding for watch button */
+    --watch-hover-transform: -3px; /* Hover transform for watch button */
+    --watch-shadow: rgba(0, 0, 0, 0.4); /* Shadow color for watch button */
+}
+
+/* Slider Container */
 .slider_container {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin: auto;
     width: 100vw;
     max-width: 1200px;
     height: 40vh;
     overflow: hidden;
     position: relative;
-    background: #151515;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background: var(--slider-container-bg);
+    box-shadow: 0 10px 40px var(--slider-shadow);
     transition: height 0.4s ease;
 }
 
+/* Slider */
 .slider {
     display: flex;
     transition: transform 0.8s ease-in-out;
@@ -35,14 +50,15 @@
     transform: scale(1.03);
 }
 
+/* Description */
 .description {
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--description-bg);
     padding: 15px;
-    color: white;
+    color: var(--description-color);
     z-index: 2;
     max-width: 90%;
     transition: background 0.3s ease;
@@ -56,21 +72,22 @@
     letter-spacing: 1px;
 }
 
+/* Watch Button */
 .watch {
     display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    padding: var(--watch-padding);
+    background: var(--watch-bg);
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 20px var(--watch-shadow);
 }
 
 .watch:hover {
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
-    transform: translateY(-3px);
+    background: var(--watch-hover-bg);
+    transform: translateY(var(--watch-hover-transform));
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -101,4 +118,4 @@
     .watch {
         padding: 6px 12px;
     }
-}
+}!important;

@@ -1,61 +1,98 @@
-.container{
-    background-color: var(--bgSoft);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  .top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .addButton{
-    padding: 10px;
-    background-color: #5d57c9;
-    color: var(--text);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .table{
-    width: 100%;
-  }
-  
-  .table td{
-    padding: 10px;
-  }
-  
-  .user{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .userImage{
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .buttons{
-    display: flex;
-    gap: 10px;
-  }
-  
-  .button{
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: var(--text);
-    border: none;
-    cursor: pointer;
-  }
-  
-  .view{
-    background-color: teal;
-  }
-  
-  .delete{
-    background-color: crimson;
-  }
+/* Container for the entire UI section */
+.container {
+    background-color: var(--bgSoft); /* Soft background color */
+    padding: 20px;                   /* Padding around the content */
+    border-radius: 10px;             /* Rounded corners */
+    margin-top: 20px;                /* Space above the container */
+}
+
+/* Top section for header and buttons */
+.top {
+    display: flex;                   /* Use flexbox for layout */
+    align-items: center;            /* Center items vertically */
+    justify-content: space-between;  /* Space between header and button */
+}
+
+/* Button for adding new users */
+.addButton {
+    padding: 10px;                  /* Padding inside the button */
+    background-color: #5d57c9;      /* Background color for button */
+    color: var(--text);             /* Text color */
+    border: none;                   /* No border */
+    border-radius: 5px;             /* Rounded corners */
+    cursor: pointer;                 /* Pointer cursor on hover */
+}
+
+.addButton:hover,
+.view:hover,
+.delete:hover {
+    opacity: 0.8;                  /* Slightly fade button on hover */
+    transition: opacity 0.2s;     /* Smooth transition effect */
+}
+
+/* Table styling */
+.table {
+    width: 100%;                     /* Full width of the container */
+}
+
+/* Table cell styling */
+.table td {
+    padding: 10px;                  /* Padding inside each cell */
+}
+
+/* User display layout */
+.user {
+    display: flex;                   /* Use flexbox for user elements */
+    align-items: center;            /* Center items vertically */
+    gap: 10px;                      /* Space between user image and text */
+}
+
+/* User image styling */
+.userImage {
+    border-radius: 50%;              /* Circular image */
+    object-fit: cover;               /* Cover to fit the area */
+}
+
+/* Button container for actions */
+.buttons {
+    display: flex;                   /* Use flexbox for button layout */
+    gap: 10px;                      /* Space between buttons */
+}
+
+/* General button styling */
+.button {
+    padding: 5px 10px;              /* Padding for buttons */
+    border-radius: 5px;             /* Rounded corners */
+    color: var(--text);             /* Text color */
+    border: none;                   /* No border */
+    cursor: pointer;                 /* Pointer cursor on hover */
+}
+
+/* Specific button styles */
+.view {
+    background-color: teal;          /* Background color for view button */
+}
+
+.delete {
+    background-color: crimson;       /* Background color for delete button */
+}
+
+@media (max-width: 600px) {
+    .top {
+        flex-direction: column;     /* Stack items vertically on small screens */
+        align-items: flex-start;    /* Align items to start */
+    }
+
+    .addButton {
+        width: 100%;                /* Full width for button on small screens */
+    }
+
+    .buttons {
+        flex-direction: column;     /* Stack action buttons vertically */
+    }
+}
+
+.userImage {
+    width: 40px;                  /* Set a fixed width for user images */
+    height: 40px;                 /* Set a fixed height for user images */
+}

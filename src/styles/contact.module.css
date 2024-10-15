@@ -1,25 +1,46 @@
+:root {
+    --main-bg-color: #333;
+    --hover-bg-color: #464646;
+    --highlight-color: #FCA311;
+    --text-color-white: #fff;
+    --font-main: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-size-h1: 36px;
+    --font-size-h2: 24px;
+    --font-size-p: 18px;
+    --font-size-email: 20px;
+    --font-size-tooltip: 14px;
+    --icon-size: 140%;
+    --padding-container: 20px;
+    --margin-container: 50px auto;
+    --box-shadow-container: 0 0 20px rgba(0, 0, 0, 0.2);
+    --border-radius: 10px;
+    --padding-email: 10px 20px;
+    --social-icon-padding: 0.5rem;
+    --social-icon-radius: 100rem;
+}
+
 .container {
     max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    margin: var(--margin-container);
+    padding: var(--padding-container);
+    box-shadow: var(--box-shadow-container);
+    border-radius: var(--border-radius);
 }
 
 .container h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--font-main);
     text-align: center;
-    color: #FCA311;
-    font-size: 36px;
+    color: var(--highlight-color);
+    font-size: var(--font-size-h1);
     margin-bottom: 30px;
 }
 
 .container p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-family: var(--font-main);
+    font-size: var(--font-size-p);
     line-height: 1.6;
     text-align: center;
-    color: #fff;
+    color: var(--text-color-white);
 }
 
 .contactInfo {
@@ -28,34 +49,34 @@
 }
 
 .contactInfo h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 24px;
+    font-family: var(--font-main);
+    font-size: var(--font-size-h2);
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--text-color-white);
 }
 
 .email {
     position: relative;
     display: inline-flex;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
+    background-color: var(--main-bg-color);
+    padding: var(--padding-email);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .email:hover {
-    background-color: #464646;
+    background-color: var(--hover-bg-color);
 }
 
 .email span {
-    color: #fff;
-    font-size: 20px;
+    color: var(--text-color-white);
+    font-size: var(--font-size-email);
     margin-right: 10px;
 }
 
 .email i {
-    color: #FCA311;
+    color: var(--highlight-color);
     font-size: 22px;
 }
 
@@ -65,11 +86,11 @@
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background-color: var(--main-bg-color);
     color: #f4f4f4;
     padding: 5px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: var(--font-size-tooltip);
 }
 
 .email:active .tooltip {
@@ -83,13 +104,13 @@
 }
 
 .iconTextBg {
-    background-color: #333;
+    background-color: var(--main-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.3rem;
     border-radius: 100rem;
-    color: #fff;
+    color: var(--text-color-white);
     width: 40vw;
     margin: 0.3rem;
 }
@@ -102,32 +123,32 @@
 
 .insIcon {
     background: linear-gradient(0deg, rgba(251, 195, 50, 1) 10%, rgba(255, 5, 167, 1) 50%, rgba(83, 84, 211, 1) 100%);
-    font-size: 140%;
-    padding: 0.5rem;
+    font-size: var(--icon-size);
+    padding: var(--social-icon-padding);
     border-radius: 50%;
 }
 
 .tgIcon {
     background-color: #32A6E1;
-    font-size: 140%;
-    padding: 0.5rem;
-    border-radius: 100rem;
+    font-size: var(--icon-size);
+    padding: var(--social-icon-padding);
+    border-radius: var(--social-icon-radius);
 }
 
 .i {
-    font-size: 140%;
+    font-size: var(--icon-size);
 }
 
 .xIcon {
     background-color: #1D9CEB;
-    font-size: 140%;
-    padding: 0.5rem;
-    border-radius: 100rem;
+    font-size: var(--icon-size);
+    padding: var(--social-icon-padding);
+    border-radius: var(--social-icon-radius);
 }
 
 .fbIcon {
     background-color: #0865FE;
-    font-size: 140%;
-    padding: 0.5rem;
-    border-radius: 100rem;
+    font-size: var(--icon-size);
+    padding: var(--social-icon-padding);
+    border-radius: var(--social-icon-radius);
 }

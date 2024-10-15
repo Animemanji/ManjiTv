@@ -1,60 +1,149 @@
+/* Container for the overall layout, using flexbox for horizontal alignment */
 .container {
-    display: flex;
-    gap: 50px;
-    margin-top: 20px;
-  }
-  
-  .infoContainer {
-    flex: 1;
-    background-color: var(--bgSoft);
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: var(--textSoft);
-    height: max-content;
-  }
-  
-  .imgContainer{
-    width: 100%;
-    height: 300px;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  
-  .formContainer {
-    flex: 3;
-    background-color: var(--bgSoft);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .form{
-    display: flex;
+  display: flex;
+  /* Use flexbox for layout */
+  gap: 50px;
+  /* Space between children */
+  margin-top: 20px;
+  /* Space above the container */
+}
+
+/* Information container styling */
+.infoContainer {
+  flex: 1;
+  /* Takes up 1 part of the available space */
+  background-color: var(--bgSoft);
+  /* Soft background color */
+  padding: 20px;
+  /* Padding inside the container */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-weight: bold;
+  /* Bold text */
+  color: var(--textSoft);
+  /* Text color */
+  height: max-content;
+  /* Height based on content */
+}
+
+/* Image container styling */
+.imgContainer {
+  width: 100%;
+  /* Full width of parent container */
+  height: 300px;
+  /* Fixed height for the image container */
+  position: relative;
+  /* Allows absolute positioning of child elements */
+  border-radius: 10px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Hides overflowed content */
+  margin-bottom: 20px;
+  /* Space below the image container */
+}
+
+/* Form container styling */
+.formContainer {
+  flex: 3;
+  /* Takes up 3 parts of the available space */
+  background-color: var(--bgSoft);
+  /* Soft background color */
+  padding: 20px;
+  /* Padding inside the container */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  /* Flexbox for form layout */
+  flex-direction: column;
+  /* Column layout for form elements */
+}
+
+/* Input, textarea, and select styling */
+.form input,
+.form textarea,
+.form select {
+  padding: 20px;
+  /* Padding inside inputs */
+  border: 2px solid #2e374a;
+  /* Border style */
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: var(--bg);
+  /* Background color for inputs */
+  color: var(--text);
+  /* Text color for inputs */
+  margin: 10px 0px;
+  /* Vertical margin between elements */
+}
+
+/* Label styling */
+.form label {
+  font-size: 12px;
+  /* Smaller font size for labels */
+}
+
+/* Button styling */
+.form button {
+  width: 100%;
+  /* Full width of the parent container */
+  padding: 20px;
+  /* Padding inside the button */
+  background-color: teal;
+  /* Background color for button */
+  color: var(--text);
+  /* Text color */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  margin-top: 20px;
+  /* Space above the button */
+}
+
+/* Optional: Add hover effects for button */
+.form button:hover {
+  background-color: darkcyan;
+  /* Change background on hover */
+  transition: background-color 0.3s;
+  /* Smooth transition effect */
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: none;
+  /* Remove default outline */
+  border-color: #5d57c9;
+  /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(93, 87, 201, 0.5);
+  /* Add shadow for focus effect */
+}
+
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
+    /* Stack elements on smaller screens */
+    gap: 20px;
+    /* Reduce gap between items */
   }
-  
-  .form input, .form textarea, .form select{
-    padding: 20px;
-    border: 2px solid #2e374a;
-    border-radius: 5px;
-    background-color: var(--bg);
-    color: var(--text);
-    margin: 10px 0px;
-  }
-  
-  .form label{
-    font-size: 12px;
-  }
-  
-  .form button{
+
+  .infoContainer,
+  .formContainer {
     width: 100%;
-    padding: 20px;
-    background-color: teal;
-    color: var(--text);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    /* Ensure full width on small screens */
   }
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--textSoft);
+  /* Placeholder text color */
+  opacity: 0.7;
+  /* Slightly transparent */
+}

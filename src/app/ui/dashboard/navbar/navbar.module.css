@@ -1,41 +1,56 @@
+:root {
+    --bg-container: var(--bgSoft);        /* Background color for the container */
+    --bg-search: #2e374a;                 /* Background color for the search bar */
+    --border-radius: 10px;                /* Border radius for various elements */
+    --text-title: var(--textSoft);        /* Text color for titles */
+    --text-input: var(--text);            /* Text color for inputs */
+    --gap-default: 20px;                  /* Default gap between elements */
+    --padding-default: 10px;              /* Default padding */
+}
+
+/* Container styles */
 .container {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--bgSoft);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .title {
-    color: var(--textSoft);
-    font-weight: bold;
-    text-transform: capitalize;
-  }
-  
-  .menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .search {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #2e374a;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .input {
-    background-color: transparent;
-    border: none;
-    color: var(--text);
-  }
-  
-  .icons{
-    display: flex;
-    gap: 20px;
-  }
-  
+    padding: var(--padding-default);       /* Padding for the container */
+    border-radius: var(--border-radius);   /* Rounded corners */
+    background-color: var(--bg-container); /* Background color */
+    display: flex;                         /* Use flexbox for layout */
+    align-items: center;                   /* Center align items vertically */
+    justify-content: space-between;        /* Space items evenly */
+}
+
+/* Title styles */
+.title {
+    color: var(--text-title);              /* Text color */
+    font-weight: bold;                     /* Bold text */
+    text-transform: capitalize;            /* Capitalize text */
+}
+
+/* Menu styles */
+.menu {
+    display: flex;                         /* Use flexbox for layout */
+    align-items: center;                   /* Center align items vertically */
+    gap: var(--gap-default);               /* Space between menu items */
+}
+
+/* Search bar styles */
+.search {
+    display: flex;                         /* Use flexbox for layout */
+    align-items: center;                   /* Center align items vertically */
+    gap: 10px;                            /* Space between search elements */
+    background-color: var(--bg-search);   /* Background color */
+    padding: var(--padding-default);       /* Padding for search bar */
+    border-radius: var(--border-radius);   /* Rounded corners */
+}
+
+/* Input styles */
+.input {
+    background-color: transparent;         /* Transparent background */
+    border: none;                         /* No border */
+    color: var(--text-input);              /* Text color */
+}
+
+/* Icon styles */
+.icons {
+    display: flex;                         /* Use flexbox for layout */
+    gap: var(--gap-default);               /* Space between icons */
+}

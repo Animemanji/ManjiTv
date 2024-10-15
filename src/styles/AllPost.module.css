@@ -1,40 +1,57 @@
-.popular_title {
-    color: #fff;
-    font-size: 1.3rem;
-    font-family: 'Hedvig Letters Sans', sans-serif;
-    padding: 1rem 0 0 4%;
+:root {
+    --main-bg-color: #333;
+    --text-color-white: #fff;
+    --text-color-gray: #9F9F9F;
+    --font-family-main: 'Hedvig Letters Sans', sans-serif;
+    --font-family-title: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-family-public: 'Poppins', sans-serif;
+    --font-size-title: 1.3rem;
+    --font-size-post: 1rem;
+    --font-size-public: 0.9rem;
+    --post-width: 9rem;
+    --img-width: 10.8rem;
+    --img-height: 18.8rem;
+    --padding-default: 1rem 0 0 4%;
+    --gap-default: 20px;
+    --padding-flex: 0.5rem 5%;
+}
 
+.popular_title {
+    color: var(--text-color-white);
+    font-size: var(--font-size-title);
+    font-family: var(--font-family-main);
+    padding: var(--padding-default);
 }
 
 .popular {
     width: 100vw;
     display: flex;
-    padding: 0.5rem 5%;
+    padding: var(--padding-flex);
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--gap-default);
 }
 
 .post_con {
-    width: 9.0rem;
+    width: var(--post-width);
     margin-bottom: 1rem;
-    gap: 20px;
+    gap: var(--gap-default);
 }
 
 .img {
-    background-color: #333;
-    width: 10.8rem;
-    height: 18.8rem;
+    background-color: var(--main-bg-color);
+    width: var(--img-width);
+    height: var(--img-height);
     object-fit: cover;
     object-position: center;
 }
 
 .title p {
-    color: #ffffff;
+    color: var(--text-color-white);
     margin-top: 5px;
     margin-bottom: 3px;
-    font-size: 1rem !important;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: var(--font-size-post) !important;
+    font-family: var(--font-family-title);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -42,7 +59,7 @@
 }
 
 .public {
-    color: #9F9F9F;
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
+    color: var(--text-color-gray);
+    font-size: var(--font-size-public);
+    font-family: var(--font-family-public);
 }

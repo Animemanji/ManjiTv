@@ -1,15 +1,25 @@
+:root {
+    --text-color: var(--textSoft);    /* Text color for various elements */
+    --font-weight-bold: bold;          /* Font weight for bold text */
+    --font-size-small: 12px;           /* Small font size */
+    --margin-top: 30px;                /* Top margin for containers */
+}
+
+/* Container styles */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-    color: var(--textSoft);
-  }
-  
-  .logo {
-    font-weight: bold;
-  }
-  
-  .text {
-    font-size: 12px;
-  }
+    display: flex;                     /* Use flexbox for layout */
+    align-items: center;               /* Center align items vertically */
+    justify-content: space-between;    /* Space items evenly */
+    margin-top: var(--margin-top);     /* Top margin */
+    color: var(--text-color);          /* Text color */
+}
+
+/* Logo styles */
+.logo {
+    font-weight: var(--font-weight-bold); /* Bold font weight */
+}
+
+/* Text styles */
+.text {
+    font-size: var(--font-size-small);    /* Small font size */
+}

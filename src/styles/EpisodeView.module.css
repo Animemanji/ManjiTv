@@ -1,42 +1,58 @@
+:root {
+  --btn-bg-color: #333;
+  --btn-bg-hover: #555;
+  --btn-text-color: white;
+  --padding-btn: 10px;
+  --margin-btn: 0 5px;
+  --font-size-small: 14px;
+  --progress-margin: 0 10px;
+  --video-max-width: 800px;
+  --time-color: white;
+}
+
+/* Video Wrapper */
 .videoWrapper {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .videoPlayer {
-    width: 100%;
-    height: auto;
-  }
-  
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .playPauseBtn, .skipBtn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin: 0 5px;
-  }
-  
-  .playPauseBtn:hover, .skipBtn:hover {
-    background-color: #555;
-  }
-  
-  .progressBar {
-    flex-grow: 1;
-    margin: 0 10px;
-  }
-  
-  .timeInfo {
-    color: white;
-    font-size: 14px;
-  }
-  
+  position: relative;
+  width: 100%;
+  max-width: var(--video-max-width);
+  margin: 0 auto;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: auto;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.playPauseBtn,
+.skipBtn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  padding: var(--padding-btn);
+  cursor: pointer;
+  margin: var(--margin-btn);
+}
+
+.playPauseBtn:hover,
+.skipBtn:hover {
+  background-color: var(--btn-bg-hover);
+}
+
+.progressBar {
+  flex-grow: 1;
+  margin: var(--progress-margin);
+}
+
+/* Time Information */
+.timeInfo {
+  color: var(--time-color);
+  font-size: var(--font-size-small);
+}

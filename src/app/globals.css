@@ -1,42 +1,43 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Light mode background */
+  --foreground: #171717; /* Light mode text color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Dark mode background */
+    --foreground: #ededed; /* Dark mode text color */
   }
 }
 
+/* Global Styles */
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering for webkit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smoother font rendering for Firefox on macOS */
 }
 
+/* Reset Styles */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
 }
 
+/* Link Styles */
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; /* Inherit text color from parent */
+  text-decoration: none; /* Remove underline */
 }
 
+/* Dark Mode Preferences */
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    color-scheme: dark; /* Indicate that the page supports dark mode */
   }
 }

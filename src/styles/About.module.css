@@ -1,39 +1,57 @@
-/* Apply local scoping by removing global selectors like .h1, .p, etc. */
+:root {
+    --font-family: Arial, sans-serif;
+    --main-color: #FCA311;
+    --secondary-color: #dcdcdc;
+    --highlight-bg: #222;
+    --highlight-text: #e0e0e0;
+    --container-padding: 20px;
+    --container-max-width: 1200px;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 1.8rem;
+    --font-size-p: 1.1rem;
+    --line-height-p: 1.6;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --responsive-h1: 2rem;
+    --responsive-h2: 1.5rem;
+    --responsive-p: 1rem;
+    --container-padding-small: 10px;
+}
+
 .fontFamily {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     overflow-x: hidden;
 }
 
-.h1 {
+.header-title {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: var(--font-size-h1);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 20px auto;
-    padding: 20px;
+    padding: var(--container-padding);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
-.h2 {
-    color: #FCA311;
-    font-size: 1.8rem;
+.section-title {
+    color: var(--main-color);
+    font-size: var(--font-size-h2);
     margin-bottom: 10px;
 }
 
-.p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.text-paragraph {
+    font-size: var(--font-size-p);
+    line-height: var(--line-height-p);
     margin-bottom: 15px;
-    color: #dcdcdc;
+    color: var(--secondary-color);
 }
 
 .highlights {
-    background-color: #222;
+    background-color: var(--highlight-bg);
     padding: 15px;
-    border-left: 5px solid #FCA311;
+    border-left: 5px solid var(--main-color);
     border-radius: 5px;
     margin-bottom: 1rem;
 }
@@ -45,30 +63,30 @@
 
 .highlights li {
     margin: 10px 0;
-    font-size: 1.1rem;
-    color: #e0e0e0;
+    font-size: var(--font-size-p);
+    color: var(--highlight-text);
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-    .h1 {
-        font-size: 2rem;
+    .header-title {
+        font-size: var(--responsive-h1);
     }
 
-    .h2 {
-        font-size: 1.5rem;
+    .section-title {
+        font-size: var(--responsive-h2);
     }
 
-    .p {
-        font-size: 1rem;
+    .text-paragraph {
+        font-size: var(--responsive-p);
     }
 
     .container {
-        padding: 10px;
+        padding: var(--container-padding-small);
     }
 
     .highlights {
-        padding: 10px;
+        padding: var(--container-padding-small);
     }
 }
 

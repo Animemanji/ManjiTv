@@ -1,35 +1,56 @@
+:root {
+    --navbar-padding: 10px; /* Padding for navbar */
+    --navbar-background-color: #1a1a1a; /* Background color for navbar */
+    --navbar-text-color: white; /* Text color for navbar */
+    --hamburger-bar-width: 25px; /* Width of hamburger bars */
+    --hamburger-bar-height: 3px; /* Height of hamburger bars */
+    --hamburger-bar-background-color: orange; /* Background color for hamburger bars */
+    --menu-background-color: #00000093; /* Background color for menu */
+    --menu-active-left: 0; /* Active left position for menu */
+    --menu-inactive-left: -100%; /* Inactive left position for menu */
+    --submenu-background-color: #333; /* Background color for submenu */
+    --submenu-text-color: white; /* Text color for submenu */
+    --dropdown-hover-top: 30px; /* Top position for submenu on hover */
+    --close-menu-font-size: 30px; /* Font size for close menu button */
+    --close-menu-color: orange; /* Color for close menu button */
+    --search-font-size: 30px; /* Font size for search icon */
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #1a1a1a;
-    color: white;
+    padding: var(--navbar-padding);
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-text-color);
 }
 
+/* Hamburger menu */
 .hamburger {
     cursor: pointer;
 }
 
 .bar {
-    width: 25px;
-    height: 3px;
-    background-color: orange;
+    width: var(--hamburger-bar-width);
+    height: var(--hamburger-bar-height);
+    background-color: var(--hamburger-bar-background-color);
     margin: 5px 0;
 }
 
+/* Menu */
 .menu {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: var(--menu-inactive-left);
     width: 19%;
     height: 100%;
-    background-color: #00000093;
+    background-color: var(--menu-background-color);
     transition: left 0.3s ease;
     z-index: 999;
 }
 
 .menu.active {
-    left: 0;
+    left: var(--menu-active-left);
 }
 
 .menu ul {
@@ -44,11 +65,12 @@
 }
 
 .menu ul li a {
-    color: white;
+    color: var(--navbar-text-color);
     font-size: 24px;
     text-decoration: none;
 }
 
+/* Dropdown */
 .dropdown {
     position: relative;
     cursor: pointer;
@@ -57,9 +79,9 @@
 .submenu {
     display: none;
     position: absolute;
-    top: 30px;
+    top: var(--dropdown-hover-top);
     left: 0;
-    background-color: #333;
+    background-color: var(--submenu-background-color);
     list-style: none;
     padding: 10px;
     margin: 0;
@@ -74,40 +96,36 @@
 }
 
 .submenu li a {
-    color: white;
+    color: var(--submenu-text-color);
     font-size: 18px;
 }
 
+/* Close menu button */
 .closeMenu {
     position: absolute;
     top: 20px;
     right: 20px;
     background-color: transparent;
     border: none;
-    font-size: 30px;
-    color: orange;
+    font-size: var(--close-menu-font-size);
+    color: var(--close-menu-color);
     cursor: pointer;
 }
 
+/* Search */
 .search {
-    font-size: 30px;
+    font-size: var(--search-font-size);
     cursor: pointer;
 }
 
-.btn{
+.btn {
     background: none;
     border: none;
 }
 
-@media screen and (max-width:900px) {
+/* Responsive design */
+@media screen and (max-width: 900px) {
     .menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
         width: 50%;
-        height: 100%;
-        background-color: #000000ac;
-        transition: left 0.3s ease;
-        z-index: 999;
     }
 }

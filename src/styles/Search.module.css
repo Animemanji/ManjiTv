@@ -1,16 +1,39 @@
+:root {
+    --container-max-width: 1200px; /* Max width for container */
+    --container-padding: 20px; /* Padding for container */
+    --title-font-size: 2.5rem; /* Font size for title */
+    --title-margin-bottom: 20px; /* Margin bottom for title */
+    --title-color: #333; /* Color for title */
+    --search-input-padding: 10px; /* Padding for search input */
+    --search-input-width: 300px; /* Width for search input */
+    --search-input-border: 1px solid #ccc; /* Border for search input */
+    --search-input-font-size: 1rem; /* Font size for search input */
+    --search-button-padding: 10px 20px; /* Padding for search button */
+    --search-button-background: #0070f3; /* Background color for search button */
+    --search-button-color: white; /* Text color for search button */
+    --search-button-disabled-background: #ccc; /* Disabled background color */
+    --post-width: 200px; /* Width for posts */
+    --post-margin: 20px; /* Margin for posts */
+    --img-border-radius: 8px; /* Border radius for images */
+    --img-hover-transform: scale(1.05); /* Hover effect for images */
+    --anime-title-font-size: 1.2rem; /* Font size for anime title */
+    --description-font-size: 0.9rem; /* Font size for description */
+    --description-color: #666; /* Color for description */
+}
+
 /* Search.module.css */
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--container-padding);
     text-align: center;
 }
 
 .title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: var(--title-font-size);
+    margin-bottom: var(--title-margin-bottom);
+    color: var(--title-color);
 }
 
 .searchForm {
@@ -20,26 +43,26 @@
 }
 
 .searchInput {
-    padding: 10px;
-    width: 300px;
+    padding: var(--search-input-padding);
+    width: var(--search-input-width);
     border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+    border: var(--search-input-border);
+    font-size: var(--search-input-font-size);
 }
 
 .searchButton {
-    padding: 10px 20px;
+    padding: var(--search-button-padding);
     margin-left: 10px;
-    background-color: #0070f3;
-    color: white;
+    background-color: var(--search-button-background);
+    color: var(--search-button-color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: var(--search-input-font-size);
 }
 
 .searchButton:disabled {
-    background-color: #ccc;
+    background-color: var(--search-button-disabled-background);
     cursor: not-allowed;
 }
 
@@ -50,19 +73,19 @@
 }
 
 .post {
-    width: 200px;
-    margin: 20px;
+    width: var(--post-width);
+    margin: var(--post-margin);
     cursor: pointer;
 }
 
 .img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--img-border-radius);
     transition: transform 0.3s ease;
 }
 
 .img:hover {
-    transform: scale(1.05);
+    transform: var(--img-hover-transform);
 }
 
 .titleBox {
@@ -70,11 +93,11 @@
 }
 
 .animeTitle {
-    font-size: 1.2rem;
+    font-size: var(--anime-title-font-size);
     font-weight: bold;
 }
 
 .description {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: var(--description-font-size);
+    color: var(--description-color);
 }

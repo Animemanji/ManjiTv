@@ -1,125 +1,144 @@
+:root {
+    --primary-bg-color: #FCA311;
+    --text-color-light: #fff;
+    --font-size-large: 2rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 1rem;
+    --opacity-hover: 0.75;
+    --footer-padding: 20px 50px;
+    --social-icon-margin: 0 10px;
+    --wave-width: 1000px;
+    --wave-height: 100px;
+    --wave-opacity-1: 1;
+    --wave-opacity-2: 0.5;
+    --wave-opacity-3: 0.2;
+    --wave-opacity-4: 0.7;
+    --wave-animation-speed: 4s;
+    --footer-margin-top: 10rem;
+}
+
 /***** Footer Styles *****/
 .footer {
-  margin-top: 10rem;
-  position: relative;
-  width: 100vw;
-  background: #FCA311;
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    margin-top: var(--footer-margin-top);
+    position: relative;
+    width: 100vw;
+    background: var(--primary-bg-color);
+    min-height: 100px;
+    padding: var(--footer-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .socialIcon,
 .menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 .socialIconItem,
 .menuItem {
-  list-style: none;
+    list-style: none;
 }
 
 .socialIconLink {
-  font-size: 2rem;
-  color: #ffffff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+    font-size: var(--font-size-large);
+    color: var(--text-color-light);
+    margin: var(--social-icon-margin);
+    display: inline-block;
+    transition: 0.5s;
 }
 
 .socialIconLink:hover {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .menuLink {
-  font-size: 1.2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-  text-decoration: none;
-  opacity: 0.75;
-  font-weight: 300;
+    font-size: var(--font-size-medium);
+    color: var(--text-color-light);
+    margin: var(--social-icon-margin);
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: var(--opacity-hover);
+    font-weight: 300;
 }
 
 .menuLink:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .footer p {
-  color: #fff;
-  margin: 15px 0 10px 0;
-  font-size: 1rem;
-  font-weight: 300;
+    color: var(--text-color-light);
+    margin: 15px 0 10px 0;
+    font-size: var(--font-size-small);
+    font-weight: 300;
 }
 
 /***** Waves Animation *****/
 .waves {
-  position: absolute;
-  top: -90px;
-  left: 0;
-  width: 100%;
-  height: 100px;
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: var(--wave-height);
 }
 
 .wave {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  background: url("/images/wave.webp");
-  background-size: 1000px 100px;
+    position: absolute;
+    width: 100%;
+    height: var(--wave-height);
+    background: url("/images/wave.webp");
+    background-size: var(--wave-width) var(--wave-height);
 }
 
 #wave1 {
-  z-index: 2;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWaves 4s linear infinite;
+    z-index: 2;
+    opacity: var(--wave-opacity-1);
+    bottom: 0;
+    animation: animateWaves var(--wave-animation-speed) linear infinite;
 }
 
 #wave2 {
-  z-index: 4;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animate 4s linear infinite !important;
+    z-index: 4;
+    opacity: var(--wave-opacity-2);
+    bottom: 10px;
+    animation: animate var(--wave-animation-speed) linear infinite !important;
 }
 
 #wave3 {
-  z-index: 7;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWaves 3s linear infinite;
+    z-index: 7;
+    opacity: var(--wave-opacity-3);
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
 }
 
 #wave4 {
-  z-index: 9;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animate 3s linear infinite;
+    z-index: 9;
+    opacity: var(--wave-opacity-4);
+    bottom: 20px;
+    animation: animate 3s linear infinite;
 }
 
 @keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
+    0% {
+        background-position-x: var(--wave-width);
+    }
+    100% {
+        background-position-x: 0px;
+    }
 }
 
 @keyframes animate {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
+    0% {
+        background-position-x: calc(-1 * var(--wave-width));
+    }
+    100% {
+        background-position-x: 0px;
+    }
 }

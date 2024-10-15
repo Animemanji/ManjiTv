@@ -1,57 +1,71 @@
+/* Form container styles */
 .form {
-    display: flex;
-    margin-top: 50px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    display: flex;                     /* Use flexbox for layout */
+    margin-top: 50px;                 /* Space above the form */
+    flex-direction: column;            /* Stack children vertically */
+    justify-content: center;           /* Center items vertically */
+    align-items: center;               /* Center items horizontally */
+    gap: 20px;                        /* Space between children */
 }
 
+/* Description text area styles */
 .description {
-    height: 300px;
-    width: 500px;
-    border: none;
-    border-radius: 10px;
-    background-image: url("/bg.jpg");
-    background-position: center;
-    color: #fff;
-    font-size: 20px;
+    height: 300px;                     /* Fixed height for description area */
+    width: 500px;                      /* Fixed width */
+    border: none;                      /* No border */
+    border-radius: 10px;              /* Rounded corners */
+    background-image: url("/bg.jpg"); /* Background image */
+    background-position: center;       /* Center the background image */
+    color: #fff;                       /* White text color */
+    font-size: 20px;                   /* Font size */
+    padding: 10px;                     /* Padding inside the textarea */
 }
 
-.description::placeholder{
-    font-size: 24px;
-    font-weight: bolder;
-    color: rgb(2, 245, 233);
-    text-align: center;
-    margin-top: 50px;
+/* Placeholder styles for description */
+.description::placeholder {
+    font-size: 24px;                   /* Placeholder font size */
+    font-weight: bolder;               /* Bold placeholder text */
+    color: rgb(2, 245, 233);           /* Placeholder color */
+    text-align: center;                /* Center align placeholder text */
 }
 
+/* Instagram icon styles */
 .insta {
-    position: relative;
-    margin-top: 5px;
-    font-size: 30px;
-    fill: hotpink;
+    position: relative;                /* Position relative for child elements */
+    margin-top: 5px;                  /* Space above the Instagram icon */
+    font-size: 30px;                   /* Font size for the icon */
+    fill: hotpink;                     /* Fill color for the icon */
 }
 
+/* Additional description input styles */
 .description1 {
-    border: none;
-    height: 50px;
-    width: 500px;
-    border-radius: 10px;
-    background-color: #181818;
-    color: #FFFFFF;
+    border: none;                      /* No border */
+    height: 50px;                     /* Fixed height */
+    width: 500px;                     /* Fixed width */
+    border-radius: 10px;              /* Rounded corners */
+    background-color: #181818;        /* Dark background color */
+    color: #FFFFFF;                   /* White text color */
+    padding: 10px;                    /* Padding inside the input */
 }
 
-.description1::placeholder{
-    color: #FFFFFF;
-    text-align: center;
+/* Placeholder styles for additional description input */
+.description1::placeholder {
+    color: #FFFFFF;                   /* White placeholder text */
+    text-align: center;               /* Center align placeholder text */
 }
 
-.button{
-    border: none;
-    padding: 15px;
-    border-radius: 9px;
-    background-color: #fd4d3d;
-    color: #FFFFFF;
-    cursor: pointer;
+/* Button styles */
+.button {
+    border: none;                     /* No border */
+    padding: 15px;                   /* Padding inside the button */
+    border-radius: 9px;              /* Rounded corners */
+    background-color: #fd4d3d;       /* Button background color */
+    color: #FFFFFF;                  /* White text color */
+    cursor: pointer;                  /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #ff3d3d;       /* Change background color on hover */
 }

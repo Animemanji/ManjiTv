@@ -1,39 +1,74 @@
+/* Main container for the layout */
 .container {
-    display: flex;
-  }
-  
-  .menu {
-    flex: 1;
-    background-color: var(--bgSoft);
-    padding: 20px;
-    min-height: 100vh;
-  }
-  
-  .content {
-    flex: 4;
-    padding: 20px;
-  }
-  
-  .wrapper {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .main {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .cards {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  .side {
-    flex: 1;
-  }
-  
+    display: flex;                 /* Use flexbox for layout */
+}
+
+/* Menu styles */
+.menu {
+    flex: 1;                      /* Takes up 1 part of the available space */
+    background-color: var(--bgSoft); /* Background color for the menu */
+    padding: 20px;                /* Padding inside the menu */
+    min-height: 100vh;           /* Ensures menu covers full viewport height */
+}
+
+/* Content area styles */
+.content {
+    flex: 4;                      /* Takes up 4 parts of the available space */
+    padding: 20px;                /* Padding inside the content area */
+}
+
+/* Wrapper for main content and sidebars */
+.wrapper {
+    display: flex;                /* Use flexbox for the wrapper */
+    gap: 20px;                   /* Space between child elements */
+    margin-top: 20px;           /* Space above the wrapper */
+}
+
+/* Main section styles */
+.main {
+    flex: 3;                      /* Takes up 3 parts of the available space */
+    display: flex;                /* Use flexbox for the main section */
+    flex-direction: column;       /* Stack children vertically */
+    gap: 20px;                   /* Space between children */
+}
+
+/* Cards layout styles */
+.cards {
+    display: flex;                /* Use flexbox for the card layout */
+    gap: 20px;                   /* Space between cards */
+    justify-content: space-between; /* Distribute cards evenly */
+}
+
+/* Sidebar styles */
+.side {
+    flex: 1;                      /* Takes up 1 part of the available space */
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;   /* Stack menu and content on small screens */
+    }
+
+    .menu {
+        min-height: auto;        /* Reset min-height for smaller screens */
+        padding: 10px;           /* Reduce padding */
+    }
+
+    .content {
+        padding: 10px;           /* Reduce padding for content area */
+    }
+
+    .wrapper {
+        flex-direction: column;   /* Stack wrapper elements on small screens */
+        gap: 10px;                /* Reduce gap for smaller screens */
+    }
+
+    .main {
+        flex: 1;                  /* Allow main section to take full width */
+    }
+
+    .side {
+        display: none;            /* Hide side bar on small screens */
+    }
+}

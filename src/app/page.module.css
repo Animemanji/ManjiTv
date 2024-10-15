@@ -1,165 +1,169 @@
 .page {
+  /* Define RGB values for gray tones for easy manipulation */
   --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08); /* Light gray with 8% opacity */
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05); /* Light gray with 5% opacity */
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
+  --button-primary-hover: #383838; /* Darker shade for primary button hover */
+  --button-secondary-hover: #f2f2f2; /* Lighter shade for secondary button hover */
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  grid-template-rows: 20px 1fr 20px; /* Three-row grid layout */
+  align-items: center; /* Center items vertically */
+  justify-items: center; /* Center items horizontally */
+  min-height: 100svh; /* Minimum height of the viewport */
+  padding: 80px; /* Padding around the page */
+  gap: 64px; /* Space between grid rows */
+  font-family: var(--font-geist-sans); /* Custom font for the page */
 }
 
+/* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+    --gray-rgb: 255, 255, 255; /* Change gray RGB for dark mode */
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145); /* Dark mode opacity */
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06); /* Dark mode opacity */
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+    --button-primary-hover: #ccc; /* Light gray for primary button hover */
+    --button-secondary-hover: #1a1a1a; /* Darker shade for secondary button hover */
   }
 }
 
 .main {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  flex-direction: column; /* Column layout for main content */
+  gap: 32px; /* Space between items in the main section */
+  grid-row-start: 2; /* Position in grid */
 }
 
 .main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+  font-family: var(--font-geist-mono); /* Monospace font for ordered list */
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Font size for list items */
+  line-height: 24px; /* Line height for better readability */
+  letter-spacing: -0.01em; /* Slight letter spacing */
+  list-style-position: inside; /* List markers inside the list */
 }
 
 .main li:not(:last-of-type) {
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* Space between list items */
 }
 
 .main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
+  font-family: inherit; /* Inherit font from parent */
+  background: var(--gray-alpha-100); /* Background for code snippets */
+  padding: 2px 4px; /* Padding for code */
+  border-radius: 4px; /* Rounded corners for code blocks */
+  font-weight: 600; /* Bold text for emphasis */
 }
 
 .ctas {
   display: flex;
-  gap: 16px;
+  gap: 16px; /* Space between call-to-action buttons */
 }
 
 .ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-  cursor: pointer;
+  appearance: none; /* Remove default styling */
+  border-radius: 128px; /* Pill shape for buttons */
+  height: 48px; /* Fixed height for buttons */
+  padding: 0 20px; /* Horizontal padding */
+  border: none; /* No border */
+  border: 1px solid transparent; /* Transparent border */
+  transition: background 0.2s, color 0.2s, border-color 0.2s; /* Smooth transitions */
+  cursor: pointer; /* Pointer cursor for buttons */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  font-size: 16px; /* Font size for buttons */
+  line-height: 20px; /* Line height for buttons */
+  font-weight: 500; /* Medium font weight */
 }
 
 a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+  background: var(--foreground); /* Primary button background */
+  color: var(--background); /* Primary button text color */
+  gap: 8px; /* Space between icon and text */
 }
 
 a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
+  border-color: var(--gray-alpha-200); /* Border color for secondary button */
+  min-width: 180px; /* Minimum width for secondary button */
 }
 
 .footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
+  grid-row-start: 3; /* Position in grid */
+  display: flex; /* Flexbox for footer layout */
+  gap: 24px; /* Space between footer items */
 }
 
 .footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex; /* Flexbox for footer links */
+  align-items: center; /* Center items vertically */
+  gap: 8px; /* Space between icon and text */
 }
 
 .footer img {
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
-/* Enable hover only on non-touch devices */
+/* Enable hover effects only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+    background: var(--button-primary-hover); /* Change background on hover */
+    border-color: transparent; /* Remove border on hover */
   }
 
   a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+    background: var(--button-secondary-hover); /* Change background on hover */
+    border-color: transparent; /* Remove border on hover */
   }
 
   .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    text-decoration: underline; /* Underline on hover */
+    text-underline-offset: 4px; /* Offset for underlining */
   }
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .page {
-    padding: 32px;
-    padding-bottom: 80px;
+    padding: 32px; /* Reduced padding for smaller screens */
+    padding-bottom: 80px; /* Specific bottom padding */
   }
 
   .main {
-    align-items: center;
+    align-items: center; /* Center items in the main section */
   }
 
   .main ol {
-    text-align: center;
+    text-align: center; /* Center text for ordered list */
   }
 
   .ctas {
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons vertically */
   }
 
   .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+    font-size: 14px; /* Smaller font size for buttons */
+    height: 40px; /* Reduced height for buttons */
+    padding: 0 16px; /* Reduced horizontal padding */
   }
 
   a.secondary {
-    min-width: auto;
+    min-width: auto; /* Remove minimum width for secondary button */
   }
 
   .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of footer items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
   }
 }
 
+/* Logo adjustments for dark mode */
 @media (prefers-color-scheme: dark) {
   .logo {
-    filter: invert();
+    filter: invert(); /* Invert logo colors for dark mode */
   }
 }

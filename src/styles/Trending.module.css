@@ -1,145 +1,147 @@
-.trand_text {
-  margin: 1rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #fff;
-  border-bottom: 2px solid #FCA311;
-  padding-bottom: 10px;
+:root {
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font family */
+    --text-color: #fff; /* Text color */
+    --highlight-color: #FCA311; /* Highlight color for borders */
+    --item-width: 10rem; /* Width for cards */
+    --card-height: 250px; /* Height for cards */
+    --scrollbar-display: none; /* Scrollbar visibility */
+    --reflection-opacity: 0.5; /* Opacity for reflection */
+    --reflection-bg: black; /* Background color for reflection */
+    --image-border-radius: 1rem; /* Border radius for images */
 }
 
+/* Trend Text */
+.trand_text {
+    margin: 1rem;
+    font-family: var(--font-family);
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 10px;
+}
+
+/* Cards Container */
 .cards {
-  --item-width: 10rem;
-  list-style: none;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 300px;
+    list-style: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
 }
 
 .cards::-webkit-scrollbar {
-  display: none;
+    display: var(--scrollbar-display);
 }
 
 .card:first-of-type {
-  margin-left: calc(50% - (var(--item-width) / 2));
+    margin-left: calc(50% - (var(--item-width) / 2));
 }
 
 .card:last-of-type {
-  margin-right: calc(50% - (var(--item-width) / 2));
+    margin-right: calc(50% - (var(--item-width) / 2));
 }
 
 .card {
-  view-timeline-name: --item-visible;
-  view-timeline-axis: inline;
-  animation: linear adjust-z-index both;
-  animation-timeline: --item-visible;
-  transform: translate3d(0, 0, 0);
-  flex: 0 0 auto;
-  perspective: 1000px;
-  position: relative;
-  z-index: 1;
-  will-change: z-index;
-  display: block;
-  scroll-snap-align: center;
-  text-decoration: none;
+    view-timeline-name: --item-visible;
+    view-timeline-axis: inline;
+    animation: linear adjust-z-index both;
+    animation-timeline: --item-visible;
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 auto;
+    perspective: 1000px;
+    position: relative;
+    z-index: 1;
+    will-change: z-index;
+    display: block;
+    scroll-snap-align: center;
+    text-decoration: none;
 }
 
 .card img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.card>.image {
-  position: relative;
-  display: block;
-  animation: linear rotate both;
-  animation-timeline: --item-visible;
-  will-change: transform;
-  width: var(--item-width);
-  aspect-ratio: 250/350;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: translate3d(-50%, 0, 0) rotate3d(0, 1, 0, -45deg) scale(0.5);
-  transform: translate3d(-50%, 0, 0) rotate3d(0, 1, 0, -45deg) scale(0.5);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+/* Card Image */
+.card > .image {
+    position: relative;
+    display: block;
+    animation: linear rotate both;
+    animation-timeline: --item-visible;
+    will-change: transform;
+    width: var(--item-width);
+    aspect-ratio: 250 / 350;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 0) rotate3d(0, 1, 0, -45deg) scale(0.5);
+    backface-visibility: hidden;
 }
 
-.image>img {
-  display: block;
-  border-radius: 1rem;
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.image > img {
+    display: block;
+    border-radius: var(--image-border-radius);
+    width: 100%;
+    height: var(--card-height);
+    object-fit: cover;
 }
 
-.img{
-  width: 100%;
-  height: 250px;
+.img {
+    width: 100%;
+    height: var(--card-height);
 }
 
+/* Image Reflection */
 .image .reflection {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(black 60%, rgba(0, 0, 0, 0.5)), var(--image);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 1rem;
-  transform: scaleY(-1) translateY(-0.5em);
-  opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(var(--reflection-bg) 60%, rgba(0, 0, 0, 0.5)), var(--image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: var(--image-border-radius);
+    transform: scaleY(-1) translateY(-0.5em);
+    opacity: var(--reflection-opacity);
 }
 
+/* Keyframes */
 @keyframes adjust-z-index {
-  0% {
-    z-index: 1;
-  }
-
-  50% {
-    z-index: 100;
-  }
-
-  100% {
-    z-index: 1;
-  }
+    0% {
+        z-index: 1;
+    }
+    50% {
+        z-index: 100;
+    }
+    100% {
+        z-index: 1;
+    }
 }
 
 @keyframes rotate {
-  0% {
-    -webkit-transform: translate3d(-50%, 0, 0) rotate3d(0, 1, 0, -45deg) scale(0.5);
-    transform: translate3d(-50%, 0, 0) rotate3d(0, 1, 0, -45deg) scale(0.5);
-    opacity: 0.25;
-  }
-
-  35% {
-    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, -40deg) scale(0.75);
-    transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, -40deg) scale(0.75);
-  }
-
-  50% {
-    -webkit-transform: translate3d(0, 0, 1em) rotate3d(0, 1, 0, 0) scale(1);
-    transform: translate3d(0, 0, 1em) rotate3d(0, 1, 0, 0) scale(1);
-    opacity: 1;
-  }
-
-  65% {
-    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 40deg) scale(0.75);
-    transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 40deg) scale(0.75);
-  }
-
-  100% {
-    -webkit-transform: translate3d(50%, 0, 0) rotate3d(0, 1, 0, 45deg) scale(0.5);
-    transform: translate3d(50%, 0, 0) rotate3d(0, 1, 0, 45deg) scale(0.5);
-    opacity: 0.25;
-  }
+    0% {
+        transform: translate3d(-50%, 0, 0) rotate3d(0, 1, 0, -45deg) scale(0.5);
+        opacity: 0.25;
+    }
+    35% {
+        transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, -40deg) scale(0.75);
+    }
+    50% {
+        transform: translate3d(0, 0, 1em) rotate3d(0, 1, 0, 0) scale(1);
+        opacity: 1;
+    }
+    65% {
+        transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 40deg) scale(0.75);
+    }
+    100% {
+        transform: translate3d(50%, 0, 0) rotate3d(0, 1, 0, 45deg) scale(0.5);
+        opacity: 0.25;
+    }
 }

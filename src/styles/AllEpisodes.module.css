@@ -1,9 +1,26 @@
-/* AllEpisodes.module.css */
+:root {
+    --font-size-large: 1.5em;
+    --font-size-medium: 1.2em;
+    --font-size-small: 1em;
+    --font-size-smaller: 0.8em;
+    --margin-bottom-large: 20px;
+    --margin-top-small: 10px;
+    --padding-card: 15px;
+    --border-radius: 10px;
+    --text-color-light: #fff;
+    --text-color-muted: #999;
+    --text-color-info: #fefcfc;
+    --blur-effect: blur(5px);
+    --episode-width: 300px;
+    --cover-height: 300px;
+    --cover-width: 300px;
+    --gap: 20px;
+}
 
 /* Styling for the first section (cover image and description) */
 .coverSection {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-bottom-large);
 }
 
 .backimage {
@@ -18,62 +35,62 @@
     width: 100vw;
     height: 300px;
     object-fit: cover;
-    filter: blur(5px);
+    filter: var(--blur-effect);
 }
 
 .coverImage {
-  display: none;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
+    display: none;
+    width: var(--cover-width);
+    height: var(--cover-height);
+    border-radius: var(--border-radius);
     object-fit: cover;
 }
 
 .coverDescription {
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: var(--font-size-medium);
+    margin-top: var(--margin-top-small);
 }
 
 /* Styling for the episodes list */
 .episodesList {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--gap);
     justify-content: start;
 }
 
 .episodeCard {
-    padding: 15px;
-    border-radius: 10px;
-    width: 300px;
+    padding: var(--padding-card);
+    border-radius: var(--border-radius);
+    width: var(--episode-width);
     text-align: start;
-    color: #fff;
+    color: var(--text-color-light);
 }
 
 .episodeTitle {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: var(--font-size-large);
+    margin-bottom: var(--margin-top-small);
 }
 
 .episodeDescription {
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-size: var(--font-size-small);
+    margin-bottom: var(--margin-top-small);
 }
 
 .videoPlayer {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .ep_length {
-    margin-top: 10px;
-    font-size: 0.8em;
-    color: #999;
+    margin-top: var(--margin-top-small);
+    font-size: var(--font-size-smaller);
+    color: var(--text-color-muted);
 }
 
 .more_info {
-    margin-top: 10px;
-    font-size: 0.8em;
-    color: #fefcfc;
+    margin-top: var(--margin-top-small);
+    font-size: var(--font-size-smaller);
+    color: var(--text-color-info);
 }

@@ -1,38 +1,54 @@
+:root {
+    --bg-soft: var(--bgSoft);       /* Soft background color */
+    --hover-bg: #2e374a;            /* Background color on hover */
+    --number-font-size: 24px;       /* Font size for numbers */
+    --detail-font-size: 14px;       /* Font size for details */
+    --font-weight-medium: 500;       /* Medium font weight */
+    --font-weight-light: 300;        /* Light font weight */
+    --color-positive: lime;          /* Color for positive numbers */
+    --color-negative: red;           /* Color for negative numbers */
+}
+
+/* Container styles */
 .container {
-    background-color: var(--bgSoft);
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    gap: 20px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .container:hover{
-    background-color: #2e374a;
-  }
-  
-  .texts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .number {
-    font-size: 24px;
-    font-weight: 500;
-  }
-  
-  .detail {
-    font-size: 14px;
-    font-weight: 300;
-  }
-  
-  .positive {
-    color: lime;
-  }
-  
-  .negative {
-    color: red;
-  }
-  
+    background-color: var(--bg-soft);   /* Soft background color */
+    padding: 20px;                       /* Padding around the container */
+    border-radius: 10px;                 /* Rounded corners */
+    display: flex;                       /* Flexbox layout */
+    gap: 20px;                          /* Space between child elements */
+    cursor: pointer;                     /* Pointer cursor on hover */
+    width: 100%;                        /* Full width */
+}
+
+/* Hover effect for container */
+.container:hover {
+    background-color: var(--hover-bg);  /* Change background color on hover */
+}
+
+/* Texts container styles */
+.texts {
+    display: flex;                       /* Flexbox layout */
+    flex-direction: column;              /* Stack items vertically */
+    gap: 20px;                          /* Space between child elements */
+}
+
+/* Number styles */
+.number {
+    font-size: var(--number-font-size); /* Font size for numbers */
+    font-weight: var(--font-weight-medium); /* Medium font weight */
+}
+
+/* Detail styles */
+.detail {
+    font-size: var(--detail-font-size); /* Font size for details */
+    font-weight: var(--font-weight-light); /* Light font weight */
+}
+
+/* Positive and negative color styles */
+.positive {
+    color: var(--color-positive);       /* Color for positive text */
+}
+
+.negative {
+    color: var(--color-negative);       /* Color for negative text */
+}

@@ -1,14 +1,70 @@
+/* Container styles */
 .container {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 5px 0px;
-    border-radius: 10px;
-  }
-  
-  .container:hover,
-  .active {
-    background-color: #2e374a;
-  }
-  
+    padding: 20px;                     /* Padding inside the container */
+    display: flex;                     /* Use flexbox for layout */
+    align-items: center;               /* Center align items vertically */
+    gap: 10px;                        /* Space between container elements */
+    margin: 5px 0;                    /* Vertical margin for containers */
+    border-radius: 10px;               /* Rounded corners */
+}
+
+.container:hover,
+.active {
+    background-color: #2e374a;        /* Background color on hover and for active state */
+}
+
+/* User styles */
+.user {
+    display: flex;                    /* Use flexbox for user layout */
+    align-items: center;              /* Center align items vertically */
+    gap: 20px;                       /* Space between user elements */
+    margin-bottom: 20px;              /* Space below each user */
+}
+
+.userImage {
+    border-radius: 50%;               /* Circular images */
+    object-fit: cover;                /* Maintain aspect ratio */
+}
+
+.userDetail {
+    display: flex;                    /* Use flexbox for user details */
+    flex-direction: column;           /* Stack details vertically */
+}
+
+.username {
+    font-weight: 500;                 /* Medium font weight for username */
+}
+
+.userTitle {
+    font-size: 12px;                  /* Small font size for user title */
+    color: var(--textSoft);          /* Soft text color */
+}
+
+.list {
+    list-style: none;                 /* Remove default list styling */
+}
+
+.cat {
+    color: var(--textSoft);          /* Soft text color for category */
+    font-weight: bold;                /* Bold font for category */
+    font-size: 13px;                  /* Font size for category */
+    margin: 10px 0;                   /* Margin above and below */
+}
+
+.logout {
+    padding: 20px;                    /* Padding inside logout button */
+    margin: 5px 0;                    /* Vertical margin */
+    display: flex;                    /* Use flexbox for logout layout */
+    align-items: center;              /* Center align items vertically */
+    gap: 10px;                       /* Space between logout elements */
+    cursor: pointer;                  /* Pointer cursor on hover */
+    border-radius: 10px;              /* Rounded corners */
+    background: none;                 /* No background by default */
+    border: none;                     /* No border */
+    color: white;                    /* Text color for logout */
+    width: 100%;                     /* Full width for logout button */
+}
+
+.logout:hover {
+    background-color: #2e374a;        /* Dark background on hover */
+}

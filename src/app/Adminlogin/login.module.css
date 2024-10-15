@@ -1,126 +1,153 @@
+:root {
+    --bg-color: rgba(255, 255, 255, 0.5);    /* Background color for elements */
+    --text-color: #fff;                       /* Default text color */
+    --input-border-color: #ccc;               /* Border color for input fields */
+    --button-bg-color: #fff;                  /* Button background color */
+    --button-text-color: #000;                 /* Button text color */
+    --button-hover-bg: rgba(255, 255, 255, 0.15); /* Button hover background */
+}
+
+/* Main container */
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-  padding: 0 10px;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+    display: flex;                             /* Flexbox layout */
+    align-items: center;                       /* Center items vertically */
+    justify-content: center;                   /* Center items horizontally */
+    min-height: 100vh;                        /* Full viewport height */
+    width: 100%;                               /* Full width */
+    padding: 0 10px;                          /* Padding */
+    box-sizing: border-box;                   /* Include padding in width */
+    font-family: "Open Sans", sans-serif;     /* Font family */
 }
 
+/* Background image styling */
 .img {
-  z-index: -1;
-  position: absolute;
-  filter: blur(5px);
+    z-index: -1;                              /* Behind other elements */
+    position: absolute;                       /* Absolute positioning */
+    filter: blur(5px);                        /* Blur effect */
 }
 
+/* Wrapper styling */
 .wrapper {
-  width: 400px;
-  border-radius: 8px;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+    width: 400px;                             /* Fixed width */
+    border-radius: 8px;                       /* Rounded corners */
+    padding: 30px;                            /* Padding inside the wrapper */
+    text-align: center;                       /* Center text */
+    border: 1px solid var(--bg-color);        /* Border with transparent background */
+    backdrop-filter: blur(9px);                /* Blur effect on backdrop */
+    -webkit-backdrop-filter: blur(9px);      /* For Safari support */
 }
 
+/* Form styling */
 .form {
-  display: flex;
-  flex-direction: column;
+    display: flex;                            /* Flexbox layout */
+    flex-direction: column;                   /* Stack items vertically */
 }
 
+/* Heading styling */
 .h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #fff;
+    font-size: 2rem;                          /* Font size */
+    margin-bottom: 20px;                     /* Space below heading */
+    color: var(--text-color);                 /* Text color */
 }
 
+/* Input field styling */
 .input_field {
-  position: relative;
-  border-bottom: 2px solid #ccc;
-  margin: 15px 0;
+    position: relative;                       /* Relative positioning for labels */
+    border-bottom: 2px solid var(--input-border-color); /* Border color */
+    margin: 15px 0;                          /* Space around input field */
 }
 
+/* Label styling */
 .input_field label {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 16px;
-  pointer-events: none;
-  transition: 0.15s ease;
+    position: absolute;                       /* Absolute positioning */
+    top: 50%;                                 /* Center vertically */
+    left: 0;                                  /* Align left */
+    transform: translateY(-50%);             /* Center correction */
+    color: var(--text-color);                 /* Label color */
+    font-size: 16px;                          /* Font size */
+    pointer-events: none;                     /* Disable pointer events */
+    transition: 0.15s ease;                   /* Transition effect */
 }
 
+/* Input field styling */
 .input_field input {
-  width: 100%;
-  height: 40px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #fff;
+    width: 100%;                             /* Full width */
+    height: 40px;                            /* Height */
+    background: transparent;                 /* Transparent background */
+    border: none;                            /* No border */
+    outline: none;                           /* No outline */
+    font-size: 16px;                         /* Font size */
+    color: var(--text-color);                /* Input text color */
 }
 
-.input_field input:focus~label,
-.input_field input:valid~label {
-  font-size: 0.8rem;
-  top: 10px;
-  transform: translateY(-120%);
+/* Label animation on focus/valid */
+.input_field input:focus ~ label,
+.input_field input:valid ~ label {
+    font-size: 0.8rem;                       /* Smaller font size */
+    top: 10px;                               /* Move label up */
+    transform: translateY(-120%);           /* Shift label */
 }
 
+/* Forget password section */
 .forget {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 25px 0 35px 0;
-  color: #fff;
+    display: flex;                           /* Flexbox layout */
+    align-items: center;                     /* Center vertically */
+    justify-content: space-between;          /* Space between items */
+    margin: 25px 0 35px 0;                  /* Space around the section */
+    color: var(--text-color);                /* Text color */
 }
 
+/* Checkbox styling */
 #remember {
-  accent-color: #fff;
+    accent-color: var(--text-color);         /* Checkbox color */
 }
 
+/* Forget section labels */
 .forget label {
-  display: flex;
-  align-items: center;
+    display: flex;                           /* Flexbox layout */
+    align-items: center;                     /* Center vertically */
 }
 
+/* Paragraph in forget section */
 .forget label p {
-  margin-left: 8px;
+    margin-left: 8px;                        /* Space to the left */
 }
 
+/* Link styling */
 .wrapper a {
-  color: #efefef;
-  text-decoration: none;
+    color: #efefef;                          /* Link color */
+    text-decoration: none;                   /* No underline */
 }
 
+/* Link hover effect */
 .wrapper a:hover {
-  text-decoration: underline;
+    text-decoration: underline;              /* Underline on hover */
 }
 
+/* Button styling */
 .button {
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  border-radius: 3px;
-  font-size: 16px;
-  border: 2px solid transparent;
-  transition: 0.3s ease;
+    background: var(--button-bg-color);      /* Button background color */
+    color: var(--button-text-color);         /* Button text color */
+    font-weight: 600;                        /* Font weight */
+    border: none;                            /* No border */
+    padding: 12px 20px;                     /* Padding inside button */
+    cursor: pointer;                         /* Pointer cursor on hover */
+    border-radius: 3px;                     /* Rounded corners */
+    font-size: 16px;                         /* Font size */
+    border: 2px solid transparent;           /* Transparent border */
+    transition: 0.3s ease;                   /* Transition effect */
 }
 
+/* Button hover effect */
 .button:hover {
-  color: #fff;
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.15);
+    color: var(--text-color);                /* Text color on hover */
+    border-color: var(--text-color);         /* Border color on hover */
+    background: var(--button-hover-bg);      /* Background color on hover */
 }
 
+/* Register text styling */
 .register {
-  text-align: center;
-  margin-top: 30px;
-  color: #fff;
+    text-align: center;                      /* Center text */
+    margin-top: 30px;                       /* Space above register text */
+    color: var(--text-color);                /* Text color */
 }

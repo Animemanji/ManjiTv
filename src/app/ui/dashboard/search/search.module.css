@@ -1,16 +1,26 @@
+:root {
+    --bg-container: #2e374a;         /* Background color for the container */
+    --bg-input: transparent;          /* Background color for input fields */
+    --border-radius: 10px;            /* Border radius for containers and inputs */
+    --text-color: var(--text);       /* Text color for inputs */
+    --padding: 10px;                  /* Padding value */
+}
+
+/* Container styles */
 .container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #2e374a;
-    padding: 10px;
-    border-radius: 10px;
-    width: max-content;
-  }
-  
-  .input {
-    background-color: transparent;
-    border: none;
-    color: var(--text);
-    outline: none;
-  }
+    display: flex;                    /* Use flexbox for layout */
+    align-items: center;              /* Center align items vertically */
+    gap: 10px;                       /* Space between container elements */
+    background-color: var(--bg-container); /* Background color */
+    padding: var(--padding);          /* Padding for container */
+    border-radius: var(--border-radius); /* Rounded corners */
+    width: max-content;               /* Adjust width to content */
+}
+
+/* Input styles */
+.input {
+    background-color: var(--bg-input); /* Transparent background */
+    border: none;                     /* No border */
+    color: var(--text-color);         /* Text color */
+    outline: none;                    /* No outline */
+}
